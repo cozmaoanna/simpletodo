@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 
-from todoitem.views import get_index, add_item, edit_item, toggle_status
+from todoitem.views import get_index, add_item, edit_item, toggle_status, log_in
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,5 +25,7 @@ urlpatterns = [
     url(r'^add$', add_item),
     url(r'^edit/(\d+)$', edit_item),
     url(r'^toggle/(\d+)$', toggle_status),
+    url(r'^login/', log_in),
+
 ]
 
